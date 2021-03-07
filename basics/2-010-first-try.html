@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> My First HTML. </title>
+</head>
+<body>
+	<h1> I dont know if it creates a heading. </h1>
+	<ul>
+		<li> Okay First Bullet. </li>
+		<li> Once More :D </li>
+	</ul>
+	<button> Magic Button </br> Give it a hit to change bg color. </button>
+</body>
+<style type="text/css"> 
+	h1 {
+		color : green;
+	}
+	button
+	{
+		border: 10px solid red;
+		background-color: brown;
+		color: white;
+	}
+</style>
+<script type="text/javascript">
+	document.querySelector("button").addEventListener("click", function(){
+  document.body.style.background = randColor();
+})
+
+function randColor(){
+  return '#' + (function co(lor){   return (lor +=
+    [0,1,2,3,4,5,6,7,8,9,'a','b','c','d','e','f'][Math.floor(Math.random()*16)])
+    && (lor.length == 6) ?  lor : co(lor); })('');
+}
+</script>
+</html>
